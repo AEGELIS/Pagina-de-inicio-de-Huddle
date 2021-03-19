@@ -1,0 +1,142 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(../imagenes/bg-mobile.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100%;
+    background-color: var(--Violet);
+    padding: 2.1rem;
+    margin: 0;
+
+    /*font-family: 'Poppins', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header .logo {
+    max-width: 150px;
+    margin-bottom: 4rem;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.ilustracion {
+    display: block;
+    margin-bottom: 4rem;
+}
+
+.ilustracion img {
+    max-width: 100%;
+    text-align: center;
+}
+
+.seccion {
+    max-width: 520px;
+    margin-bottom: 5rem;
+}
+
+.titulo {
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.texto {
+    margin-bottom: 24px;
+}
+
+input[type=button] {
+    background-color: white;
+    color: var(--Violet);
+    width: 200px;
+    height: 46px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 30%);
+    transition: all 0.2s;
+}
+
+input[type=button]:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+
+.footer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+span {
+    color: white;
+    font-size: 26px;
+    letter-spacing: 20px;
+    transition: all 0.2s;
+}
+
+span:hover {
+    color: var(--Soft-Magenta);
+}
+
+span:nth-child(2) {
+    margin: .5rem;
+}
+
+@media screen and (min-width:1280px) {
+    body{
+        padding: 4rem 2.1rem;
+        background-image: url(../imagenes/bg-desktop.svg);
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    input[type=button]{
+        font-size: 18px;
+        height: 56px;
+    }
+
+    .ilustracion {
+        text-align: left;
+        max-width: 700px;
+        margin-right: 60px;
+    }
+
+    .seccion {
+        text-align: left;
+        width: 36%;
+    }
+
+    .texto{
+        line-height: 1.5;
+    }
+
+    .footer {
+        text-align: right;
+    }
+}
